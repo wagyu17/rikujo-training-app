@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+@layer components {
+  .card {
+    @apply bg-white border border-paper-200 rounded-xl;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center select-none rounded-lg font-medium transition active:scale-[0.98];
+    min-height: 48px;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-white hover:bg-accent-ink px-5;
+  }
+  .btn-soft {
+    @apply btn bg-accent-soft text-accent-ink hover:bg-accent/20 px-5;
+  }
+  .btn-ghost {
+    @apply btn bg-paper-100 text-ink-700 hover:bg-paper-200 px-5;
+  }
+  .btn-outline {
+    @apply btn border border-paper-300 text-ink-700 hover:bg-paper-100 px-5;
+  }
+  .btn-danger {
+    @apply btn bg-red-50 text-red-700 hover:bg-red-100 px-5;
+  }
+  .chip {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs bg-paper-100 text-ink-500 border border-paper-200;
+  }
+  .input {
+    @apply w-full rounded-lg border border-paper-300 bg-white px-3 py-2 text-base outline-none focus:border-accent focus:ring-2 focus:ring-accent-soft;
+    min-height: 48px;
+  }
+  .label {
+    @apply text-xs font-medium uppercase tracking-wider text-ink-500;
+  }
+  .h-title {
+    @apply text-2xl font-bold text-ink-900;
+  }
+}
